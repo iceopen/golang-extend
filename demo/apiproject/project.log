@@ -1,0 +1,2 @@
+2017/05/09 13:37:47 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/05/09 13:37:48 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    535.814µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml

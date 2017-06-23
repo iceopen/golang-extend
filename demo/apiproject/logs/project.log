@@ -1,0 +1,32 @@
+2017/05/09 13:38:43 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/05/09 13:38:48 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    536.214µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:38:53 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    294.496µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:38:55 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/05/09 13:39:41 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/05/09 13:39:48 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    537.996µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:39:53 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|     283.94µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:40:48 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    301.091µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:40:50 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/05/09 13:40:54 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    655.687µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:41:48 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    190.367µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:41:53 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    201.953µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:42:48 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    287.159µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:42:54 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    264.999µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:43:23 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    172.511µs|   match|[44m GET     [0m /v1/object   r:/v1/object/
+2017/05/09 13:43:48 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    286.923µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:43:54 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    250.187µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:44:23 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/05/09 13:44:48 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|   8.645628ms| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:44:56 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    295.941µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:45:47 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    324.441µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:45:53 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    237.673µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:46:48 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    259.678µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:46:53 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    184.708µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:47:48 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    295.851µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:47:53 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    265.542µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:48:47 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    225.265µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:48:53 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    271.222µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:49:48 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    284.038µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/09 13:49:54 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    210.788µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
+2017/05/11 19:46:55 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/05/11 20:01:50 [D] [server.go:2568] |  192.168.1.237|[43m 404 [0m|    575.543µs| nomatch|[44m GET     [0m /DevMgmt/DiscoveryTree.xml
