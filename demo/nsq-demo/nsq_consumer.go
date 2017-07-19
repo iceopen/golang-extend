@@ -1,19 +1,25 @@
 package main
 
 import (
+	"encoding/json"
+	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql" // import your used driver
 	"github.com/nsqio/go-nsq"
 	"log"
-	"github.com/astaxie/beego/orm"
-	"fmt"
 	"time"
-	"strconv"
 )
 
-func init() {
-	orm.RegisterDataBase("default", "mysql", "root:@tcp(172.16.50.143:4000)/shtelecom?charset=utf8", 30)
-	orm.Debug = true
+type ActBody struct {
+	Openid  string `json:"openid"`  // 主体内容
+	Acttime string `json:"acttime"` // 活动时间
+	Type    string `json:"type"`    // 类型
+	Note    string `json:"note"`    // 备注
+	Uuid    string `json:"uuid"`    // UUID
+}
 
+func init() {
+	orm.RegisterDataBase("default", "mysql", "mohoo:mohoo@tcp(172.16.50.143:4000)/shtelecom?charset=utf8", 30)
+	orm.Debug = false
 }
 
 func main() {
@@ -26,19 +32,27 @@ func main() {
 	}
 	// 设置消息处理函数
 	consumer.AddHandler(nsq.HandlerFunc(func(message *nsq.Message) error {
-		log.Println(string(message.Body))
-		i := time.Now().Unix()
-		res, err := o.Raw(" INSERT INTO openid_active (openid, acttime, type, note) VALUES(?, ?, ?, ?); ", string(message.Body), strconv.FormatInt(i, 10), "BIND", "WX").Exec()
-		if err == nil {
-			num, _ := res.RowsAffected()
-			fmt.Println("mysql row affected nums: ", num)
+		var actBody ActBody
+		errJson := json.Unmarshal(message.Body, &actBody)
+		if errJson != nil {
+			return err
 		}
-		time.Sleep(3 * time.Millisecond)
+		_, err := o.Raw("INSERT INTO openid_active (openid, acttime, type, note, uuid) VALUES(?, ?, ?, ?, ?); ", actBody.Openid, actBody.Acttime, actBody.Type, actBody.Note, actBody.Uuid).Exec()
+		if err == nil {
+			log.Println("id:", actBody.Openid, " time:", actBody.Acttime)
+		} else {
+			log.Fatal(err.Error())
+			panic(1)
+		}
+		time.Sleep(5 * time.Millisecond)
 		return nil
 	}))
 	// 连接到单例nsqd
 	if err := consumer.ConnectToNSQD("172.16.50.143:4150"); err != nil {
 		log.Fatal(err)
 	}
+	//if err := consumer.ConnectToNSQD("127.0.0.1:4150"); err != nil {
+	//	log.Fatal(err)
+	//}
 	<-consumer.StopChan
 }

@@ -31,8 +31,11 @@ func init() {
 	cfg := nsq.NewConfig()
 	var err error
 	producer, err = nsq.NewProducer("172.16.50.143:4150", cfg)
+	//producer, err = nsq.NewProducer("127.0.0.1:4150", cfg)
 	if err != nil {
 		log.Fatal(err)
+	} else {
+		log.Println("nsq 链接正常")
 	}
 }
 
@@ -42,7 +45,7 @@ func main() {
 		body := new(ProBody)
 		var err error
 		if err = c.Bind(body); err != nil {
-			return c.JSON(http.StatusMethodNotAllowed, "内容体不对")
+			return c.JSON(http.StatusMethodNotAllowed, "JSON body 内容体不对"+err.Error())
 		}
 		if body.Body == "" {
 			return c.JSON(http.StatusMethodNotAllowed, "body不能为空")

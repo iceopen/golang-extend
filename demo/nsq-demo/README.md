@@ -1,13 +1,12 @@
 # 监控HTTP数据
 
 ## 依赖
-- 必须：https://github.com/shirou/gopsutil
-- window必须：https://github.com/go-ole/go-ole
-- window必须：https://github.com/StackExchange/wmi
+- 必须：github.com/labstack/echo
 
 ## 编译方式
 - go 1.5 一下使用：gox 多平台编译
-- go 1.5 以后使用：GOOS=linux GOARCH=amd64 go build -o ./bin/nsqProducer nsq_producer.go 进行编译
+- go 1.5 以后使用：GOOS=linux GOARCH=amd64 go build -o ./bin/nsqProducer nsq_producer.go
+- go 1.5 以后使用：GOOS=windows GOARCH=amd64 go build -o ./bin/nsqConsumer.exe nsq_consumer.go
 
 ## 编译平台参考
 
