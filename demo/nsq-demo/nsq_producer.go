@@ -1,12 +1,12 @@
 package main
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/labstack/echo"
-	"net/http"
 	"github.com/nsqio/go-nsq"
 	"log"
-	"fmt"
-	"encoding/json"
+	"net/http"
 )
 
 type ProBody struct {
