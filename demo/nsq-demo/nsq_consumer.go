@@ -2,11 +2,12 @@ package main
 
 import (
 	"encoding/json"
+	"log"
+	"time"
+
 	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql" // import your used driver
 	"github.com/nsqio/go-nsq"
-	"log"
-	"time"
 )
 
 type ActBody struct {
@@ -18,7 +19,7 @@ type ActBody struct {
 }
 
 func init() {
-	orm.RegisterDataBase("default", "mysql", "mohoo:mohoo@tcp(172.16.50.143:4000)/shtelecom?charset=utf8", 30)
+	orm.RegisterDataBase("default", "mysql", "root:root@tcp(127.0.0.1:3306)/shtelecom?charset=utf8", 30)
 	orm.Debug = false
 }
 
