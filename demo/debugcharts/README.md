@@ -11,7 +11,7 @@ import _ "github.com/mkevac/debugcharts"
 ```
 
 ## 使用案例：
-```
+```golang
 package main
 
 import (
