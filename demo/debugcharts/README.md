@@ -1,3 +1,17 @@
+# [debugcharts](https://github.com/mkevac/debugcharts)
+
+## 安装方法：
+```
+go get -v -u github.com/mkevac/debugcharts
+```
+
+## 使用方法：
+```
+import _ "github.com/mkevac/debugcharts"
+```
+
+## 使用案例：
+```
 package main
 
 import (
@@ -9,8 +23,8 @@ import (
 
 	_ "net/http/pprof"
 
-	_ "github.com/mkevac/debugcharts"
 	"github.com/gorilla/handlers"
+	_ "github.com/mkevac/debugcharts"
 )
 
 func dummyCPUUsage() {
@@ -46,3 +60,4 @@ func main() {
 	log.Printf("you can now open http://localhost:8080/debug/charts/ in your browser")
 	select {}
 }
+```
