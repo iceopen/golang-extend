@@ -1,15 +1,25 @@
 package main
 
 import (
-	"log"
 	"time"
-
-	"github.com/google/gops/agent"
+	"fmt"
+	"github.com/allegro/bigcache"
 )
 
 func main() {
-	if err := agent.Listen(nil); err != nil {
-		log.Fatal(err)
+	cache, _ := bigcache.NewBigCache(bigcache.DefaultConfig(10 * time.Minute))
+
+
+	cache.Set("my-unique-key", []byte("value"))
+
+	entry, _ := cache.Get("my-unique-key")
+	fmt.Println(string(entry))
+	if string(entry) == "" {
+		fmt.Println("不存在")
 	}
-	time.Sleep(time.Hour)
+	entry, _ = cache.Get("my-unique-key1")
+	if string(entry) == "" {
+		fmt.Println("不存在")
+	}
+	fmt.Println(string(entry))
 }
