@@ -11,3 +11,8 @@ Golang Demo
 - [gse](gse) Go 语言高效分词, 支持英文、中文、日文等
 - [gpy](gpy) 汉语拼音转换工具 Go 版。
 - [debugcharts](debugcharts) Very simple charts with some debug data for Go programs
+- [bytes](bytes) 字节转换
+- [cid](cid) Content ID v1 implemented in go
+- [codis](codis) codis 链接测试
+- [echo](echo) echo 的 hello 和 jwt 案例
+- [freecache](freecache) FreeCache - A cache library for Go with zero GC overhead and high concurrent performance.
