@@ -5,6 +5,7 @@ import (
 	"github.com/coocood/freecache"
 	"runtime/debug"
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -13,21 +14,22 @@ func main() {
 	debug.SetGCPercent(20)
 	key := []byte("abc")
 	val := []byte("def")
-	expire := 60 // expire in 60 seconds
+	expire := 10 // expire in 60 seconds
 	cache.Set(key, val, expire)
 	gin.SetMode(gin.ReleaseMode)
+
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
 		got, err := cache.Get(key)
 		if err != nil {
-			fmt.Println(err)
-		} else {
+			val = []byte(fmt.Sprint(time.Now().Unix()))
+			cache.Set(key, val, expire)
 			fmt.Println(string(got))
+		} else {
+			//fmt.Println(string(got))
 		}
-
-		fmt.Println("entry count ", cache.EntryCount())
 		c.JSON(200, gin.H{
-			"message": "pong",
+			"message": string(got),
 		})
 	})
 	r.Run() // listen and serve on 0.0.0.0:8080
