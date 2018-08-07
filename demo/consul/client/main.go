@@ -13,7 +13,7 @@ const RECV_BUF_LEN = 1024
 
 func main() {
 	config := consulapi.DefaultConfig()
-	config.Address = "192.168.1.8:8500" // 修改 consul IP和端口 地址
+	config.Address = "127.0.0.1:8500" // 修改 consul IP和端口 地址
 
 	client, err := consulapi.NewClient(config)
 
@@ -35,12 +35,12 @@ func main() {
 			continue
 		}
 
-		if _, found := services["serverNode_1"]; !found {
-			log.Println("serverNode_1 not found")
+		if _, found := services["shtelecom-spi-api-1"]; !found {
+			log.Println("shtelecom-spi-api-1 not found")
 			continue
 		}
 
-		sendData(services["serverNode_1"])
+		sendData(services["shtelecom-spi-api-1"])
 
 	}
 }

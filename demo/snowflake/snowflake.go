@@ -1,6 +1,5 @@
 package snowflake
 
-
 import (
 	"encoding/base64"
 	"encoding/binary"

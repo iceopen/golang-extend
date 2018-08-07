@@ -20,7 +20,7 @@ func consulCheck(w http.ResponseWriter, r *http.Request) {
 func registerServer() {
 
 	config := consulapi.DefaultConfig()
-	config.Address = "192.168.1.8:8500" // 修改 consul IP和端口 地址
+	config.Address = "172.16.50.135:8500" // 修改 consul IP和端口 地址
 
 	client, err := consulapi.NewClient(config)
 
@@ -31,16 +31,16 @@ func registerServer() {
 	checkPort := 8080
 
 	registration := new(consulapi.AgentServiceRegistration)
-	registration.ID = "serverNode_1"
-	registration.Name = "serverNode"
+	registration.ID = "shtelecom-spi-api-1"
+	registration.Name = "shtelecom-spi-api"
 	registration.Port = 9527
-	registration.Tags = []string{"serverNode"}
-	registration.Address = "192.168.1.20" // 修改到开发时候的IP地址
+	registration.Tags = []string{"shtelecom"}
+	registration.Address = "127.0.0.1" // 修改到开发时候的IP地址
 	registration.Check = &consulapi.AgentServiceCheck{
 		HTTP:                           fmt.Sprintf("http://%s:%d%s", registration.Address, checkPort, "/check"),
 		Timeout:                        "3s",
 		Interval:                       "5s",
-		DeregisterCriticalServiceAfter: "30s", //check失败后30秒删除本服务
+		DeregisterCriticalServiceAfter: "10s", //check失败后30秒删除本服务
 	}
 
 	err = client.Agent().ServiceRegister(registration)
