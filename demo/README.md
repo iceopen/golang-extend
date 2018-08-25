@@ -3,7 +3,10 @@ Golang Demo
 ==============
 
 ## 案例
+- [httptest](httptest) Golang web 框架基础性能测试
+- [docker最小化]]](httptest/base) golang和docker最小化
 - [apiproject](apiproject) beego API 使用案例
+- [apm](apm) [elastic apm](https://github.com/elastic/apm-server) gin 基础测试
 - [nsq-demo](nsq-demo) NSQ 使用案例
 - [consul-demo](consul) Consul 使用案例
 - [phantomjs](phantomjs) go 使用 phantomjs 案例
@@ -16,3 +19,6 @@ Golang Demo
 - [codis](codis) codis 链接测试
 - [echo](echo) echo 的 hello 和 jwt 案例
 - [freecache](freecache) FreeCache - A cache library for Go with zero GC overhead and high concurrent performance.
+- [badger](badger) Fast key-value DB in Go.
+- [wechat](wechat) 微信开发
+ 
