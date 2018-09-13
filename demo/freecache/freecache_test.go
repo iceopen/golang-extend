@@ -4,7 +4,7 @@ import (
 	"testing"
 	"github.com/coocood/freecache"
 	"runtime/debug"
-)
+		)
 
 func BenchmarkTest(b *testing.B) {
 	cacheSize := 100 * 1024 * 1024
@@ -21,4 +21,10 @@ func BenchmarkTest(b *testing.B) {
 			b.Fatal(err)
 		}
 	}
+}
+
+func TestTTT(t *testing.T) {
+
+
+
 }
