@@ -2,9 +2,10 @@ package main
 
 import (
 	"log"
-	"time"
-	"github.com/nsqio/go-nsq"
 	"strconv"
+	"time"
+
+	nsq "github.com/nsqio/go-nsq"
 )
 
 func main() {
@@ -22,7 +23,7 @@ func startProducer() {
 	// 发布消息
 	for {
 		i := time.Now().Unix()
-		if err := producer.Publish("test", []byte("test message - "+ strconv.FormatInt(i, 10))); err != nil {
+		if err := producer.Publish("test", []byte("test message - "+strconv.FormatInt(i, 10))); err != nil {
 			log.Fatal("publish error: " + err.Error())
 		}
 		time.Sleep(100 * time.Millisecond)
