@@ -3,6 +3,27 @@
 [![Build status](https://circleci.com/gh/google/gops/tree/master.svg?style=shield&circle-token=2637dc1e57d5407ae250480a86a2e553a7d20482)](https://circleci.com/gh/google/gops)
 [![GoDoc](https://godoc.org/github.com/google/gops?status.svg)](https://godoc.org/github.com/google/gops)
 
+
+测试案例效果：
+```sh
+╭─iceinto@iceinto ~
+╰─$ gops
+49371 49352 main* go1.11.2 /private/var/folders/9x/c1cwb3n9005_v5lr25jx0dtm0000gp/T/go-build216332130/b001/exe/main
+49412 47968 gops  go1.11.2 /Users/iceinto/Documents/go/bin/gops
+49352 48729 go    go1.11.2 /usr/local/go/bin/go
+╭─iceinto@iceinto ~
+╰─$ gops 49371
+parent PID:	49352
+threads:	6
+memory usage:	0.062%
+cpu usage:	0.093%
+username:	iceinto
+cmd+args:	/var/folders/9x/c1cwb3n9005_v5lr25jx0dtm0000gp/T/go-build216332130/b001/exe/main
+local/remote:	127.0.0.1:61338 <-> :0 (LISTEN)
+local/remote:	*:8080 <-> :0 (LISTEN)
+```
+
+
 gops is a command to list and diagnose Go processes currently running on your system.
 
 ```sh
