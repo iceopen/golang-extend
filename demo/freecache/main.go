@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/coocood/freecache"
-	"runtime/debug"
 	"fmt"
+	"runtime/debug"
+
+	"github.com/coocood/freecache"
 )
 
 func main() {
