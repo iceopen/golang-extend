@@ -1,12 +1,14 @@
 package main
 
 import (
-	"github.com/go-redis/redis"
 	"fmt"
+
+	"github.com/go-redis/redis"
 )
 
 // 192.168.1.149:19000
 var client = &redis.Client{}
+
 func init() {
 	client = redis.NewClient(&redis.Options{
 		Addr:     "127.0.0.1:19000",
