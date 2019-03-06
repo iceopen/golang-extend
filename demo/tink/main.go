@@ -1,10 +1,10 @@
 package main
 
 import (
+	"github.com/astaxie/beego/logs"
+	"github.com/google/tink/go/subtle/aead"
 	"github.com/google/tink/go/subtle/random"
 	"golang.org/x/crypto/chacha20poly1305"
-	"github.com/google/tink/go/subtle/aead"
-	"github.com/astaxie/beego/logs"
 )
 
 func main() {
