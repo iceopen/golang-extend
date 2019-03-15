@@ -1,0 +1,12 @@
+{"Type":"INFO","Message":"Listening on 9991 for control plane"}
+{"Type":"INFO","Message":"Listening on 9996 for TCP latency tests"}
+{"Type":"INFO","Message":"Listening on 9998 for TCP conn/s tests"}
+{"Type":"INFO","Message":"Listening on 9999 for TCP bandwidth tests"}
+{"Type":"INFO","Message":"Listening on 9991 for control plane"}
+{"Type":"INFO","Message":"Listening on 9996 for TCP latency tests"}
+{"Type":"INFO","Message":"Listening on 9998 for TCP conn/s tests"}
+{"Type":"INFO","Message":"Listening on 9999 for TCP bandwidth tests"}
+{"Type":"INFO","Message":"Listening on 9991 for control plane"}
+{"Type":"INFO","Message":"Listening on 9996 for TCP latency tests"}
+{"Type":"INFO","Message":"Listening on 9998 for TCP conn/s tests"}
+{"Type":"INFO","Message":"Listening on 9999 for TCP bandwidth tests"}
