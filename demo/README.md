@@ -13,6 +13,7 @@ Golang Demo
 - [bigcache](bigcache) [Bigcache](https://github.com/allegro/bigcache) 使用案例
 - [nsq-demo](nsq-demo) [NSQ](https://github.com/nsqio/nsq) 使用案例
 - [consul-demo](consul) [Consul](https://github.com/hashicorp/consul) 使用案例
+- [defer](defer) defer 
 - [phantomjs](phantomjs) go 使用 phantomjs 案例 [go-phantomjs-fetcher](https://github.com/nladuo/go-phantomjs-fetcher)
 - [robotgo](robotgo) Golang 跨平台自动化系统，控制键盘鼠标位图和读取屏幕，窗口句柄以及全局事件监听
 - [gse](gse) Go 语言高效分词, 支持英文、中文、日文等
