@@ -3,7 +3,7 @@ package main
 import "net"
 import "fmt"
 import "bufio"
-import "strings" // only needed below for sample processing
+import "strings"
 
 func main() {
 

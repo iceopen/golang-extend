@@ -1,23 +1,21 @@
 package main
 
 import (
-	"context"
-	"log"
-	"net/http"
+	"fmt"
 
 	"github.com/hashicorp/consul/api"
 )
 
 func main() {
-	client, err := api.NewClient(&api.Config{Address: "192.168.1.8:8500"})
+	client, err := api.NewClient(&api.Config{Address: "127.0.0.1:8500"})
 	if err != nil {
-		log.Fatal(err.Error())
+		fmt.Errorf(err.Error())
 	}
 
 	opts := &api.LockOptions{
 		Key:        "webhook_receiver/1",
 		Value:      []byte("set by sender 1"),
-		SessionTTL: "10s",
+		SessionTTL: "5s",
 		SessionOpts: &api.SessionEntry{
 			Checks:   []string{"serfHealth"},
 			Behavior: "release",
@@ -32,27 +30,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
-	cancelCtx, cancelRequest := context.WithCancel(context.Background())
-	req, _ := http.NewRequest("GET", "https://www.baidu.com", nil)
-	req = req.WithContext(cancelCtx)
-	go func() {
-		http.DefaultClient.Do(req)
-		select {
-		case <-cancelCtx.Done():
-			log.Println("request cancelled")
-		default:
-			log.Println("request done")
-
-			err = lock.Unlock()
-			if err != nil {
-				log.Println("lock already unlocked")
-			}
-		}
-	}()
-	go func() {
-		<-lockCh
-		cancelRequest()
-	}()
-
+	fmt.Println("lockCh")
+	<-lockCh
+	err = lock.Unlock()
+	if err != nil {
+		fmt.Println("lock already unlocked")
+	}
 }
