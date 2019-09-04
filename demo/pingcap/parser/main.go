@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/pingcap/parser"
+	_ "github.com/pingcap/tidb/types/parser_driver"
 )
 
 func main() {
