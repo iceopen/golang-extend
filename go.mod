@@ -6,7 +6,6 @@ require (
 	github.com/dgraph-io/badger v1.6.0
 	github.com/go-redis/redis v6.15.5+incompatible
 	github.com/golang/mock v1.3.1
-	github.com/iceopen/igo v2.0.0+incompatible // indirect
 	github.com/pingcap/check v0.0.0-20190102082844-67f458068fc8
 	github.com/pingcap/errors v0.11.4 // indirect
 	github.com/pingcap/parser v0.0.0-20190730030733-2414ee76eeb7
